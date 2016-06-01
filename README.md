@@ -6,17 +6,19 @@ Git is a powerful file version control system. It gives us a history to track pr
 
 ## Objectives
 
-1. Understand What Git is, and the benefits of using version control.
-2. Folder setup with README.md file.
-3. Initializing a new repository.
-4. Checking for changes (status).
-5. Staging and commiting.
-6. Log commits.
-7. Reset to a particular commit.
+1. Explain what Git is  and the benefits of using version control
+2. Set up folder with README.md file
+3. Initialize a new repository
+4. Check for changes in the status of files and folders
+5. Stage and commit changes 
+6. Log commits
+7. Reset to a particular commit
 
 ## Git, A Wonderful Version Control System
 
 Watch the videos below if you are unfamiliar with Git. We will be using Git to access course materials and to share and collaborate on project code throughout this course. After watching the video you may use the text below to review all of the topics discussed in the video.
+
+**Note** that the video uses your computer's terminal, but in this course, you'll be using the Learn IDE and all Git commands will work the same way on it as it does on your terminal. 
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PLj148bJp5wixQ3lA28anBxxdnq5fKTqWg" frameborder="0" allowfullscreen></iframe>
 
@@ -34,9 +36,9 @@ There are a lot of advantages to version control. It's great way to keep a backu
 
 ### Starting A New Project
 
-Let's start by making a new folder for our code project. In terminal we'll type `mkdir simon-stamp-collection`. Then we will cd into that folder `cd simon-stamp-collection`. This folder is empty so let's create a new file: `touch README.md`. README files are a commmon additon into open source code projects. They give a descrition of the project and any details for others browsing your code.
+Let's start by making a new folder for our code project. In the terminal are of the Learn IDE, we'll type `mkdir simon-stamp-collection`. Then we will cd into that folder `cd simon-stamp-collection`. This folder is empty so let's create a new file: `touch README.md`. README files are a commmon additon into open source code projects. They give a descrition of the project and any details for others browsing your code.
 
-Next, we'll open it up in our code editor. I'm using Sublime Text so for me that command is `subl .`. Now lets type in some text in Markdown format.
+Next, make sure that the file is open in the code editor area of the IDE. Now lets type in some text in Markdown format.
 
 ```markdown
 Simon's Stamp Collection App
@@ -78,7 +80,7 @@ This tells us that there is a new file `README.md` that is currently not staged 
 
 In order to include a file to save its progress we need to create commits. A commit is a save point for a file, very similar to taking a snapshot the same way you would with a camera. In order to save commits we need to first tell git which files we wish to include in our commit, or in other words we have to move certain files into the view of our camera. Selecting files to be part of a commit is known as staging. Let's stage our README.md file like so: `git add README.md` and then press return. When staging files we use the "add" command. This command accepts multiple filenames separated by spaces if you wish to stage multiple files at once, or to stage all current changes in the folder you are in you can use `git add .` as a shortcut.
 
-### Comitting
+### Commiting
 
 Now that we have staged our `README.md` file we would like save the progress on that file by commiting. Going back to the camera analogy, using `git add` to stage is like moving the files in view of a camera, where as commiting is like actually pressing the button to take the picture. To take a snapshot of our current state of README.md we now type: `git commit -m "add a README with some info text"` and then press return. Here the commmit command is followed by the `-m` flag which stands for message. Following this is our message for the commit in quotes `"add a README with some info text"`. This message is stored with each commit giving us a description of the state of the code if we were to go back to the commit at a later point in time. Usually commit messages are written in present tense for this reason.
 
@@ -103,11 +105,11 @@ Hey, wouldn't it be great if we could list all of our commits to see a record of
 abe211d update About headline in README (jongrover, 10 seconds ago)
 6d81119 add a README with some info text (jongrover, 2 minutes ago)
 ```
-Depending on how many commits you have saved this list may fill the screen. If so, you can use the down arrow to scroll through them and type `q` and hit return to quit out of the log if you get stuck. In my case I have just one commit so git exits the log automatically when it reaches the bottom of the log. The first set of numbers and letters is the SHA key, this is a unique id git uses to identify this commit. Following the SHA our commit message we typed in. After that we see the github user hwom made the commit and how long ago the commit was made.
+Depending on how many commits you have saved this list may fill the screen. If so, you can use the down arrow to scroll through them and type `q` and hit return to quit out of the log if you get stuck. In my case I have just one commit so git exits the log automatically when it reaches the bottom of the log. The first set of numbers and letters is the SHA key, this is a unique id git uses to identify this commit. Following the SHA our commit message we typed in. After that we see the github user who made the commit and how long ago the commit was made.
 
 ### Reset
 
-What is we wanted to go back to the moment in time before we had updated the "About" heading? We can check out and reset back to previous commits by using the reset command. To reset to a particular commit we miust make a note of that commits SHA key. Refering to the code block above we can see that running the `git log` command displays a list of our commits and all their respective SHA keys. In our case we wish to revert back to the commit fro 2 minutes ago where we "add a README with some info text" we note that the corresponding SHA key is "6d81119". Now we can type in the command `git reset --hard 6d81119`. Note that your SHA key will most likely be different from mine. This will take us back in time to when our file looked like this:
+What if we wanted to go back to the moment in time before we had updated the "About" heading? We can check out and reset back to previous commits by using the reset command. To reset to a particular commit we miust make a note of that commits SHA key. Refering to the code block above we can see that running the `git log` command displays a list of our commits and all their respective SHA keys. In our case we wish to revert back to the commit fro 2 minutes ago where we "add a README with some info text" we note that the corresponding SHA key is "6d81119". Now we can type in the command `git reset --hard 6d81119`. Note that your SHA key will most likely be different from mine. This will take us back in time to when our file looked like this:
 
 ```markdown
 Simon's Stamp Collection App
