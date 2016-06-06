@@ -20,6 +20,8 @@ Watch the videos below if you are unfamiliar with Git. We will be using Git to a
 
 **Note** that the video uses your computer's terminal, but in this course, you'll be using the Learn IDE and all Git commands will work the same way on it as it does on your terminal. 
 
+However, the video will ask you to open files using `subl .` This will not work with the IDE and so any time you are asked to open a file use `atom` + the file name. 
+
 <iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PLj148bJp5wixQ3lA28anBxxdnq5fKTqWg" frameborder="0" allowfullscreen></iframe>
 
 ### What Is Version Control?
