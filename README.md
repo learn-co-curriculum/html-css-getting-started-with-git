@@ -1,6 +1,6 @@
 # Getting Started with Git
 
-Now that you've learned some of the fundamentals of HTML, let's switch gears and talk more about version control. You've heard the words Git and Github in prior lessons, but in this unit we're going to take a much deeper dive into the topic so that you can continue to work and use your computer in the same way that experienced programmers do. 
+Now that you've learned some of the fundamentals of HTML, let's switch gears and talk more about version control. You've heard the words Git and Github in prior lessons, but in this unit we're going to take a much deeper dive into the topic so that you can continue to work and use your computer in the same way that experienced programmers do.
 
 Git is a powerful file version control system. It gives us a history to track progress on files so that we can rewind or fast forward to a specific moment in time allowing us access to previous versions of a file. It is kind of like the best undo button you will ever learn. Git also allows us to make backups of our code, as well as easily share code or collaborate on code with others. Git is the current industry standard for version control and code collaboration. Most companies hiring for developers expects a thorough understanding of Git. As a beginner Git requires a lot of memorization to learn the necessary commands and work flow. This is something you will pick up throughout the course by using Git commands to compete all labs and assignments. Not wo worry if it takes a while to get the hang of it. This is typical. You will most likely be surprised that by the end of the course you will speak fluent Git.
 
@@ -10,7 +10,7 @@ Git is a powerful file version control system. It gives us a history to track pr
 2. Set up folder with README.md file
 3. Initialize a new repository
 4. Check for changes in the status of files and folders
-5. Stage and commit changes 
+5. Stage and commit changes
 6. Log commits
 7. Reset to a particular commit
 
@@ -18,9 +18,9 @@ Git is a powerful file version control system. It gives us a history to track pr
 
 Watch the videos below if you are unfamiliar with Git. We will be using Git to access course materials and to share and collaborate on project code throughout this course. After watching the video you may use the text below to review all of the topics discussed in the video.
 
-**Note** that the video uses your computer's terminal, but in this course, you'll be using the Learn IDE and all Git commands will work the same way on it as it does on your terminal. 
+**Note** that the video uses your computer's terminal, but in this course, you'll be using the Learn IDE and all Git commands will work the same way on it as it does on your terminal.
 
-However, the video will ask you to open files using `subl .` This will not work with the IDE and so any time you are asked to open a file use `atom` + the file name. 
+However, the video will ask you to open files using `subl .` This will not work with the IDE and so any time you are asked to open a file use `atom` + the file name.
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/videoseries?list=PLj148bJp5wixQ3lA28anBxxdnq5fKTqWg" frameborder="0" allowfullscreen></iframe>
 
@@ -74,9 +74,9 @@ Untracked files:
     README.md
 
 nothing added to commit but untracked files present (use "git add" to track)
-``` 
+```
 
-This tells us that there is a new file `README.md` that is currently not staged or another words that is not being tracked for changes. 
+This tells us that there is a new file `README.md` that is currently not staged or another words that is not being tracked for changes.
 
 ### Staging
 
@@ -97,7 +97,7 @@ Simon's Stamp Collection App
 Stuff about Simon's Stamps here...
 ```
 
-Now back in Terminal let's stage and commit our changes. Type `git add README.md` press return and type `git ci -m "update About headline in README"` and press return. Now we have two unique commits. The first has saved a snapshot of our code in the README.md file with the initial text we added, the second commit saved a snapshot with the change to the "About" headline. 
+Now back in Terminal let's stage and commit our changes. Type `git add README.md` press return and type `git ci -m "update About headline in README"` and press return. Now we have two unique commits. The first has saved a snapshot of our code in the README.md file with the initial text we added, the second commit saved a snapshot with the change to the "About" headline.
 
 ### Log
 
@@ -111,7 +111,7 @@ Depending on how many commits you have saved this list may fill the screen. If s
 
 ### Reset
 
-What if we wanted to go back to the moment in time before we had updated the "About" heading? We can check out and reset back to previous commits by using the reset command. To reset to a particular commit we miust make a note of that commits SHA key. Refering to the code block above we can see that running the `git log` command displays a list of our commits and all their respective SHA keys. In our case we wish to revert back to the commit fro 2 minutes ago where we "add a README with some info text" we note that the corresponding SHA key is "6d81119". Now we can type in the command `git reset --hard 6d81119`. Note that your SHA key will most likely be different from mine. This will take us back in time to when our file looked like this:
+What if we wanted to go back to the moment in time before we had updated the "About" heading? We can check out and reset back to previous commits by using the reset command. To reset to a particular commit we miust make a note of that commits SHA key. Refering to the code block above we can see that running the `git log` command displays a list of our commits and all their respective SHA keys. In our case we wish to revert back to the commit from two minutes ago where we "add a README with some info text" we note that the corresponding SHA key is "6d81119". Now we can type in the command `git reset --hard 6d81119`. Note that your SHA key will most likely be different from mine. This will take us back in time to when our file looked like this:
 
 ```markdown
 Simon's Stamp Collection App
@@ -122,7 +122,7 @@ Simon's Stamp Collection App
 Stuff about Simon's Stamps here...
 ```
 
-It is worth noting that reseting with the `--hard` flag will remove the commits after the one you reset to, so all new commits will be continuing on from that point. If for some reason you want to go back to a previous commit without loosing the commits after it then you can instead use `git checkout <SHA key>` inserting the desired SHA key for the commit you want to travel to.
+It is worth noting that reseting with the `--hard` flag will remove the commits after the one you reset to, so all new commits will be continuing on from that point. If for some reason you want to go back to a previous commit without losing the commits after it then you can instead use `git checkout <SHA key>` inserting the desired SHA key for the commit you want to travel to.
 
 To get back to our latest commit form 10 seconds ago "update About headline in README" we can type in `git reset --hard abe211d`. Now are code look slike this again:
 
