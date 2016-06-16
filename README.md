@@ -2,11 +2,11 @@
 
 Now that you've learned some of the fundamentals of HTML, let's switch gears and talk more about version control. You've heard the words Git and Github in prior lessons, but in this unit we're going to take a much deeper dive into the topic so that you can continue to work and use your computer in the same way that experienced programmers do.
 
-Git is a powerful file version control system. It gives us a history to track progress on files so that we can rewind or fast forward to a specific moment in time allowing us access to previous versions of a file. It is kind of like the best undo button you will ever learn. Git also allows us to make backups of our code, as well as easily share code or collaborate on code with others. Git is the current industry standard for version control and code collaboration. Most companies hiring for developers expects a thorough understanding of Git. As a beginner Git requires a lot of memorization to learn the necessary commands and work flow. This is something you will pick up throughout the course by using Git commands to compete all labs and assignments. Not wo worry if it takes a while to get the hang of it. This is typical. You will most likely be surprised that by the end of the course you will speak fluent Git.
+Git is a powerful file version control system. It gives us a history to track progress on files so that we can rewind or fast forward to a specific moment in time allowing us access to previous versions of a file. It is kind of like the best undo button you will ever learn. Git also allows us to make backups of our code, as well as easily share code or collaborate on code with others. Git is the current industry standard for version control and code collaboration. Most companies hiring for developers expect a thorough understanding of Git. As a beginner, Git requires a lot of memorization to learn the necessary commands and work flow. This is something you will pick up throughout the course by using Git commands to complete all labs and assignments. Not to worry if it takes a while to get the hang of it. This is typical. You will most likely be surprised that by the end of the course you will speak fluent Git.
 
 ## Objectives
 
-1. Explain what Git is  and the benefits of using version control
+1. Explain what Git is and the benefits of using version control
 2. Set up folder with README.md file
 3. Initialize a new repository
 4. Check for changes in the status of files and folders
@@ -26,11 +26,11 @@ However, the video will ask you to open files using `subl .` This will not work 
 
 ### What Is Version Control?
 
-According to Wikipedia, "version control is the management of changes to documents". What we get from version control is the ability to track changes in our code. Git is (currently at the time of writing this) the most popular version control software for programming. Aside from versioning our code git also provides tools to backup our work by transporting our code via uploading (pushing) and downloading (pulling) to and from remote servers. Throughout the course we will be using the website Github.com to store our code assignents for the prupose of backup, collaboration, and to submit assignments using pull requests (more on this a bit later).
+According to Wikipedia, "version control is the management of changes to documents". What we get from version control is the ability to track changes in our code. Git is (currently at the time of writing this) the most popular version control software for programming. Aside from versioning our code git also provides tools to backup our work by transporting our code via uploading (pushing) and downloading (pulling) to and from remote servers. Throughout the course we will be using the website Github.com to store our code assignents for the purpose of backup, collaboration, and to submit assignments using pull requests (more on this a bit later).
 
 ### Why Use Version Control?
 
-Let's think about the future for a second. It's a year or two down the road and you're working at your dream job (YAY!). You just deployed a new chat feature for the app you're working on. Suddenly, your boss runs over to your desk. "Wait! We can't deploy the chat yet! Revert! Revert!"
+Let's think about the future for a second. It's a year or two down the road, and you're working at your dream job (YAY!). You just deployed a new chat feature for the app you're working on. Suddenly, your boss runs over to your desk. "Wait! We can't deploy the chat yet! Revert! Revert!"
 
 What do you do? You need to find all of the new code you pushed to the server and delete it. Then you need to find the old code, test it and re-upload it. So much work to do. Well, since you used version control software, it's as easy as 123. Actually, it's as easy as `git reset --hard <commit id>`... but we'll get to that later. Using version control is useful because it allows you to easily rollback to a previous version of your application, saving you a ton of extra work and time.
 
