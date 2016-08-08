@@ -111,7 +111,7 @@ Depending on how many commits you have saved this list may fill the screen. If s
 
 ### Reset
 
-What if we wanted to go back to the moment in time before we had updated the "About" heading? We can check out and reset back to previous commits by using the reset command. To reset to a particular commit we miust make a note of that commits SHA key. Refering to the code block above we can see that running the `git log` command displays a list of our commits and all their respective SHA keys. In our case we wish to revert back to the commit from two minutes ago where we "add a README with some info text" we note that the corresponding SHA key is "6d81119". Now we can type in the command `git reset --hard 6d81119`. Note that your SHA key will most likely be different from mine. This will take us back in time to when our file looked like this:
+What if we wanted to go back to the moment in time before we had updated the "About" heading? We can check out and reset back to previous commits by using the reset command. To reset to a particular commit we must make a note of that commits SHA key. Refering to the code block above we can see that running the `git log` command displays a list of our commits and all their respective SHA keys. In our case we wish to revert back to the commit from two minutes ago where we "add a README with some info text" we note that the corresponding SHA key is "6d81119". Now we can type in the command `git reset --hard 6d81119`. Note that your SHA key will most likely be different from mine. This will take us back in time to when our file looked like this:
 
 ```markdown
 Simon's Stamp Collection App
